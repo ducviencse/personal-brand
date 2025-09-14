@@ -1,25 +1,24 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>Hello!</h1>
-        <p>My name is Tony Nguyen</p>
-        <Image src="/me.jpeg" width={512} height={512} alt="avatar"/>
-        <p>I am a part time indie hacker and a full-time software engineer, building products and sharing my journey here</p>
-        <p>Find me on:</p>
+    <div className="flex-col items-center">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">What I built:</h1>
+      <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
         <li>
-          <Link href="/">My website</Link>
+          <Link className="text-blue-600" href="https://don-vi-hanh-chinh-moi.viennguyen.com?utm_source=tonyshome" target="_blank">New province lookup in VietNam(Tra cứu đơn vị hành chính mới)</Link>
         </li>
         <li>
-          <Link href="https://x.com/viennguyen_me">My X(Twitter) account</Link>
+          <Link className="text-blue-600" href="https://score-tracker.viennguyen.com?utm_source=tonyshome" target="_blank">Score tracker when for playing game in a group</Link>
         </li>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-       
-      </footer>
-    </div>
+      </ul>
+      <p>More coming soon...</p>
+      <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+        <li>Technical blog about HTML, CSS, JavaScript, React, Next.js,...</li>
+        <li>My journey as a part-time indie hacker</li>
+        <li>My experience as a software engineer</li>
+        <li>And more...</li>
+      </ul>
+    </div >
   );
 }
