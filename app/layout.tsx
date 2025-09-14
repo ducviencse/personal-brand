@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TopNav from "./top-nav";
-import { AppRoute } from "next/dist/build/swc/types";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,8 +19,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children, params
-}: any) {
+  children, }: {
+    children: React.ReactNode
+  }) {
   return (
     <html lang="en">
       <body
